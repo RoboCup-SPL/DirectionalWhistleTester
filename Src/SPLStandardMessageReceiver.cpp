@@ -19,7 +19,7 @@ SPLStandardMessageReceiver::SPLStandardMessageReceiver(unsigned int teamNumber, 
   Q_ASSERT(teamNumber < 100);
 
   socket = new QUdpSocket(this);
-  socket->bind(QHostAddress::Any, 10000 + teamNumber, QAbstractSocket::ReuseAddressHint);
+  socket->bind(QHostAddress::Any, static_cast<quint16>(10000 + teamNumber), QAbstractSocket::ReuseAddressHint);
   connect(socket, &QUdpSocket::readyRead, this, &SPLStandardMessageReceiver::handleReceivedMessages);
 }
 

@@ -43,7 +43,7 @@ public:
     {
       Q_ASSERT(vector.isObject());
       const QJsonObject vectorObject = vector.toObject();
-      vectors.append(Vector2D(vectorObject["x"].toDouble(), vectorObject["y"].toDouble()));
+      vectors.append(Vector2D(static_cast<float>(vectorObject["x"].toDouble()), static_cast<float>(vectorObject["y"].toDouble())));
     }
   }
 
@@ -69,7 +69,7 @@ public:
     {
       Q_ASSERT(pose.isObject());
       const QJsonObject poseObject = pose.toObject();
-      poses.append(Pose2D(poseObject["rotation"].toDouble() * Angle::pi / 180.f, poseObject["x"].toDouble(), poseObject["y"].toDouble()));
+      poses.append(Pose2D(static_cast<float>(poseObject["rotation"].toDouble()) * Angle::pi / 180.f, static_cast<float>(poseObject["x"].toDouble()), static_cast<float>(poseObject["y"].toDouble())));
     }
   }
 };
