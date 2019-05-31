@@ -4,6 +4,8 @@ This is the testing application for the Directional Whistle Challenge that will 
 
 ## Compilation
 
+### Linux
+
 This program depends on CMake, C++11 and Qt5 (the core, network and widgets components).
 
 On Debian and derivatives, the necessary packages are `libqt5network5` and `libqt5widgets5`. To compile it, execute the following commands in the root directory of this repository.
@@ -15,9 +17,15 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 cmake --build .
 ```
 
-This results in an executable file called `DirectionalWhistleTester` in the `Build` directory.
+This results is an executable file called `DirectionalWhistleTester` in the `Build` directory.
 
-For Windows and macOS, Qt must be installed differently. Otherwise, the compilation process is the same, provided that CMake is installed.
+### Windows
+
+For Windows, Qt must be installed differently. Otherwise, the compilation process is the same, provided that CMake is installed.
+
+### macOS
+
+Open DirectionalWhistleTester.xcodeproj using Apple's Xcode. Select either the scheme Debug or Release and build the application.
 
 ## Configuration
 

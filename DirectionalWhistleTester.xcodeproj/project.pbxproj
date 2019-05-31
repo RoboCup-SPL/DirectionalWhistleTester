@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1754425C22A174470002725F /* SPLStandardMessageReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1754424922A174470002725F /* SPLStandardMessageReceiver.cpp */; };
+		1754425D22A174470002725F /* ChallengeStartDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1754425422A174470002725F /* ChallengeStartDialog.cpp */; };
+		1754425E22A174470002725F /* Challenge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1754425522A174470002725F /* Challenge.cpp */; };
+		1754425F22A174470002725F /* MainWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1754425622A174470002725F /* MainWindow.cpp */; };
+		1754426022A174470002725F /* TeamList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1754425A22A174470002725F /* TeamList.cpp */; };
+		1754426122A174470002725F /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1754425B22A174470002725F /* Main.cpp */; };
+		1754428522A177F90002725F /* QtNetwork.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 1754428422A177F80002725F /* QtNetwork.framework */; };
+		1754428622A178380002725F /* SPLStandardMessageReceiver.h in Sources */ = {isa = PBXBuildFile; fileRef = 1754425222A174470002725F /* SPLStandardMessageReceiver.h */; };
+		1754428722A178660002725F /* Challenge.h in Sources */ = {isa = PBXBuildFile; fileRef = 1754424822A174470002725F /* Challenge.h */; };
+		1754428822A178970002725F /* MainWindow.h in Sources */ = {isa = PBXBuildFile; fileRef = 1754425122A174470002725F /* MainWindow.h */; };
+		1754428922A179710002725F /* QtNetwork.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1754428422A177F80002725F /* QtNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1754428B22A17A510002725F /* QtGui.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1754428A22A17A510002725F /* QtGui.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1754428D22A180220002725F /* QtDBus.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1754428C22A180220002725F /* QtDBus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1754428F22A1809D0002725F /* QtPrintSupport.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 1754428E22A1809D0002725F /* QtPrintSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1754429122A1DD0E0002725F /* qt.conf in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 1754429022A1DD0E0002725F /* qt.conf */; };
+		17EB9A3521368E37009D5A33 /* QtCore.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 201C9BAF1C29BC55005E4AAD /* QtCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17EB9A3A21368E56009D5A33 /* QtWidgets.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 201C9BB51C29BC55005E4AAD /* QtWidgets.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		201C9BC31C29BD93005E4AAD /* libqcocoa.dylib in Copy Platform Plugin */ = {isa = PBXBuildFile; fileRef = 201C9BBD1C29BCE7005E4AAD /* libqcocoa.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		201C9BD11C29BF02005E4AAD /* QtCore.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 201C9BAF1C29BC55005E4AAD /* QtCore.framework */; };
+		201C9BD41C29BF02005E4AAD /* QtWidgets.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 201C9BB51C29BC55005E4AAD /* QtWidgets.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		20A167DA1FF9284F0015712A /* libqmacstyle.dylib in Copy Style Plugin */ = {isa = PBXBuildFile; fileRef = 20A167D91FF9284F0015712A /* libqmacstyle.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		208443B911FA398B0037FA87 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.h";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(CONFIGURATION_TEMP_DIR)/moc_$(INPUT_FILE_BASE).cpp",
+			);
+			script = "$QT_DIR/bin/moc \"$INPUT_FILE_PATH\" -o \"$CONFIGURATION_TEMP_DIR/moc_$INPUT_FILE_BASE.cpp\"\n";
+		};
+		20844C1A11FD56640037FA87 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.qrc";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(CONFIGURATION_TEMP_DIR)/qrc_$(INPUT_FILE_BASE).cpp",
+			);
+			script = "$QT_DIR/bin/rcc -name \"$INPUT_FILE_BASE\" \"$INPUT_FILE_PATH\" -no-compress -o \"$CONFIGURATION_TEMP_DIR/qrc_$INPUT_FILE_BASE.cpp\"\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17EB9A3421368E1F009D5A33 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1754428F22A1809D0002725F /* QtPrintSupport.framework in Copy Frameworks */,
+				1754428D22A180220002725F /* QtDBus.framework in Copy Frameworks */,
+				1754428B22A17A510002725F /* QtGui.framework in Copy Frameworks */,
+				1754428922A179710002725F /* QtNetwork.framework in Copy Frameworks */,
+				17EB9A3521368E37009D5A33 /* QtCore.framework in Copy Frameworks */,
+				17EB9A3A21368E56009D5A33 /* QtWidgets.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20A167D81FF928260015712A /* Copy Style Plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = styles;
+			dstSubfolderSpec = 13;
+			files = (
+				20A167DA1FF9284F0015712A /* libqmacstyle.dylib in Copy Style Plugin */,
+			);
+			name = "Copy Style Plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C1153F17934A2700961A38 /* Copy Platform Plugin */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = platforms;
+			dstSubfolderSpec = 13;
+			files = (
+				201C9BC31C29BD93005E4AAD /* libqcocoa.dylib in Copy Platform Plugin */,
+			);
+			name = "Copy Platform Plugin";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1754424822A174470002725F /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
+		1754424922A174470002725F /* SPLStandardMessageReceiver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SPLStandardMessageReceiver.cpp; sourceTree = "<group>"; };
+		1754424A22A174470002725F /* ChallengeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeLog.h; sourceTree = "<group>"; };
+		1754424C22A174470002725F /* Reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reader.h; sourceTree = "<group>"; };
+		1754424D22A174470002725F /* Angle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angle.h; sourceTree = "<group>"; };
+		1754424E22A174470002725F /* Pose2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pose2D.h; sourceTree = "<group>"; };
+		1754424F22A174470002725F /* Paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Paths.h; sourceTree = "<group>"; };
+		1754425022A174470002725F /* Vector2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector2D.h; sourceTree = "<group>"; };
+		1754425122A174470002725F /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
+		1754425222A174470002725F /* SPLStandardMessageReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLStandardMessageReceiver.h; sourceTree = "<group>"; };
+		1754425322A174470002725F /* Metric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Metric.h; sourceTree = "<group>"; };
+		1754425422A174470002725F /* ChallengeStartDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChallengeStartDialog.cpp; sourceTree = "<group>"; };
+		1754425522A174470002725F /* Challenge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Challenge.cpp; sourceTree = "<group>"; };
+		1754425622A174470002725F /* MainWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainWindow.cpp; sourceTree = "<group>"; };
+		1754425722A174470002725F /* ChallengeStartDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeStartDialog.h; sourceTree = "<group>"; };
+		1754425822A174470002725F /* TeamList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamList.h; sourceTree = "<group>"; };
+		1754425922A174470002725F /* DetectedWhistle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectedWhistle.h; sourceTree = "<group>"; };
+		1754425A22A174470002725F /* TeamList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TeamList.cpp; sourceTree = "<group>"; };
+		1754425B22A174470002725F /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		1754428422A177F80002725F /* QtNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtNetwork.framework; path = 3rdParty/qt/macOS/lib/QtNetwork.framework; sourceTree = "<group>"; };
+		1754428A22A17A510002725F /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = 3rdParty/qt/macOS/lib/QtGui.framework; sourceTree = "<group>"; };
+		1754428C22A180220002725F /* QtDBus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtDBus.framework; path = 3rdParty/qt/macOS/lib/QtDBus.framework; sourceTree = "<group>"; };
+		1754428E22A1809D0002725F /* QtPrintSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtPrintSupport.framework; path = 3rdParty/qt/macOS/lib/QtPrintSupport.framework; sourceTree = "<group>"; };
+		1754429022A1DD0E0002725F /* qt.conf */ = {isa = PBXFileReference; lastKnownFileType = text; name = qt.conf; path = DirectionalWhistleTester.xcodeproj/qt.conf; sourceTree = "<group>"; };
+		201C9BAF1C29BC55005E4AAD /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = 3rdParty/qt/macOS/lib/QtCore.framework; sourceTree = SOURCE_ROOT; };
+		201C9BB51C29BC55005E4AAD /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = 3rdParty/qt/macOS/lib/QtWidgets.framework; sourceTree = SOURCE_ROOT; };
+		201C9BBD1C29BCE7005E4AAD /* libqcocoa.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libqcocoa.dylib; path = 3rdParty/qt/macOS/plugins/platforms/libqcocoa.dylib; sourceTree = SOURCE_ROOT; };
+		209C6D111200A9C2007E5C2E /* DirectionalWhistleTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectionalWhistleTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20A167D91FF9284F0015712A /* libqmacstyle.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libqmacstyle.dylib; path = 3rdParty/qt/macOS/plugins/styles/libqmacstyle.dylib; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A1043669E6E5A7426EA502A /* Frameworks & Libraries */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				201C9BD11C29BF02005E4AAD /* QtCore.framework in Frameworks & Libraries */,
+				1754428522A177F90002725F /* QtNetwork.framework in Frameworks & Libraries */,
+				201C9BD41C29BF02005E4AAD /* QtWidgets.framework in Frameworks & Libraries */,
+			);
+			name = "Frameworks & Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05596AB53D8D521C69802C27 /* DirectionalWhistleTester */ = {
+			isa = PBXGroup;
+			children = (
+				1754424722A174470002725F /* Src */,
+				ED1E82605DD74B483AF3C982 /* Frameworks */,
+				20D139C911F0B445007DFC5D /* Target Files */,
+			);
+			name = DirectionalWhistleTester;
+			sourceTree = "<group>";
+		};
+		1754424722A174470002725F /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				1754424B22A174470002725F /* Util */,
+				1754425522A174470002725F /* Challenge.cpp */,
+				1754424822A174470002725F /* Challenge.h */,
+				1754424A22A174470002725F /* ChallengeLog.h */,
+				1754425422A174470002725F /* ChallengeStartDialog.cpp */,
+				1754425722A174470002725F /* ChallengeStartDialog.h */,
+				1754425922A174470002725F /* DetectedWhistle.h */,
+				1754425B22A174470002725F /* Main.cpp */,
+				1754425622A174470002725F /* MainWindow.cpp */,
+				1754425122A174470002725F /* MainWindow.h */,
+				1754425322A174470002725F /* Metric.h */,
+				1754424922A174470002725F /* SPLStandardMessageReceiver.cpp */,
+				1754425222A174470002725F /* SPLStandardMessageReceiver.h */,
+				1754425A22A174470002725F /* TeamList.cpp */,
+				1754425822A174470002725F /* TeamList.h */,
+			);
+			path = Src;
+			sourceTree = "<group>";
+		};
+		1754424B22A174470002725F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				1754424D22A174470002725F /* Angle.h */,
+				1754424F22A174470002725F /* Paths.h */,
+				1754424E22A174470002725F /* Pose2D.h */,
+				1754424C22A174470002725F /* Reader.h */,
+				1754425022A174470002725F /* Vector2D.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		20D139C911F0B445007DFC5D /* Target Files */ = {
+			isa = PBXGroup;
+			children = (
+				209C6D111200A9C2007E5C2E /* DirectionalWhistleTester.app */,
+			);
+			name = "Target Files";
+			sourceTree = "<group>";
+		};
+		ED1E82605DD74B483AF3C982 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1754429022A1DD0E0002725F /* qt.conf */,
+				201C9BAF1C29BC55005E4AAD /* QtCore.framework */,
+				1754428C22A180220002725F /* QtDBus.framework */,
+				1754428A22A17A510002725F /* QtGui.framework */,
+				1754428422A177F80002725F /* QtNetwork.framework */,
+				1754428E22A1809D0002725F /* QtPrintSupport.framework */,
+				201C9BB51C29BC55005E4AAD /* QtWidgets.framework */,
+				201C9BBD1C29BCE7005E4AAD /* libqcocoa.dylib */,
+				20A167D91FF9284F0015712A /* libqmacstyle.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		299502394E013F9C280A5D16 /* DirectionalWhistleTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C33BA0A0E7432AB00ACB790 /* Build configuration list for PBXNativeTarget "DirectionalWhistleTester" */;
+			buildPhases = (
+				C29B8785722055ED95EF7B57 /* Sources */,
+				2A1043669E6E5A7426EA502A /* Frameworks & Libraries */,
+				3787F99312C85FF0073FD7BA /* Bundle Resources */,
+				17EB9A3421368E1F009D5A33 /* Copy Frameworks */,
+				20C1153F17934A2700961A38 /* Copy Platform Plugin */,
+				20A167D81FF928260015712A /* Copy Style Plugin */,
+			);
+			buildRules = (
+				208443B911FA398B0037FA87 /* PBXBuildRule */,
+				20844C1A11FD56640037FA87 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = DirectionalWhistleTester;
+			productName = SimRobotDemo;
+			productReference = 209C6D111200A9C2007E5C2E /* DirectionalWhistleTester.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91B15E841AA80083484172DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+			};
+			buildConfigurationList = 2A951308CDB28F104D0A4BD2 /* Build configuration list for PBXProject "DirectionalWhistleTester" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05596AB53D8D521C69802C27 /* DirectionalWhistleTester */;
+			productRefGroup = 05596AB53D8D521C69802C27 /* DirectionalWhistleTester */;
+			projectDirPath = "";
+			projectRoot = Src;
+			targets = (
+				299502394E013F9C280A5D16 /* DirectionalWhistleTester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3787F99312C85FF0073FD7BA /* Bundle Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1754429122A1DD0E0002725F /* qt.conf in Bundle Resources */,
+			);
+			name = "Bundle Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C29B8785722055ED95EF7B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1754425E22A174470002725F /* Challenge.cpp in Sources */,
+				1754428722A178660002725F /* Challenge.h in Sources */,
+				1754425D22A174470002725F /* ChallengeStartDialog.cpp in Sources */,
+				1754426122A174470002725F /* Main.cpp in Sources */,
+				1754425F22A174470002725F /* MainWindow.cpp in Sources */,
+				1754428822A178970002725F /* MainWindow.h in Sources */,
+				1754425C22A174470002725F /* SPLStandardMessageReceiver.cpp in Sources */,
+				1754428622A178380002725F /* SPLStandardMessageReceiver.h in Sources */,
+				1754426022A174470002725F /* TeamList.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7C33BA060E74328D00ACB790 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)/$(CONFIGURATION)";
+				FRAMEWORK_SEARCH_PATHS = $QT_DIR/lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					QT_SHARED,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+				);
+				HEADER_SEARCH_PATHS = (
+					$QT_DIR/lib/QtCore.framework/Headers,
+					$QT_DIR/lib/QtGui.framework/Headers,
+					$QT_DIR/lib/QtNetwork.framework/Headers,
+					$QT_DIR/lib/QtWidgets.framework/Headers,
+				);
+				INFOPLIST_FILE = DirectionalWhistleTester.xcodeproj/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.B-Human.DirectionalWhistleTester";
+				PRODUCT_NAME = DirectionalWhistleTester;
+				SYMROOT = Build;
+				USER_HEADER_SEARCH_PATHS = $SRCROOT/3rdParty/SPL;
+			};
+			name = Debug;
+		};
+		7C33BA070E74328D00ACB790 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)/$(CONFIGURATION)";
+				FRAMEWORK_SEARCH_PATHS = $QT_DIR/lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					QT_NO_DEBUG,
+					QT_SHARED,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+				);
+				HEADER_SEARCH_PATHS = (
+					$QT_DIR/lib/QtCore.framework/Headers,
+					$QT_DIR/lib/QtGui.framework/Headers,
+					$QT_DIR/lib/QtNetwork.framework/Headers,
+					$QT_DIR/lib/QtWidgets.framework/Headers,
+				);
+				INFOPLIST_FILE = DirectionalWhistleTester.xcodeproj/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.B-Human.DirectionalWhistleTester";
+				PRODUCT_NAME = DirectionalWhistleTester;
+				SYMROOT = Build;
+				USER_HEADER_SEARCH_PATHS = $SRCROOT/3rdParty/SPL;
+			};
+			name = Release;
+		};
+		8DB1DD96F65B1BF1FFC506E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ADDRESS_SANITIZER_CONTAINER_OVERFLOW = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/macOS/$(PRODUCT_NAME)/$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(CONFIGURATION_BUILD_DIR)";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					MACOS,
+					_DEBUG,
+				);
+				LD_MAP_FILE_PATH = "$(CONFIGURATION_TEMP_DIR)/LinkMap.txt";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				QT_DIR = "$(SRCROOT)/3rdParty/qt/macOS";
+				SKIP_INSTALL = YES;
+				SYMROOT = Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wconversion",
+					"-Wliteral-conversion",
+					"-Wno-deprecated",
+					"-Wno-sign-conversion",
+					"-Wno-unused-parameter",
+					"-Wunreachable-code",
+				);
+			};
+			name = Debug;
+		};
+		95E1EB2E5DDD587BE5B3E548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/macOS/$(PRODUCT_NAME)/$(CONFIGURATION)";
+				CONFIGURATION_TEMP_DIR = "$(CONFIGURATION_BUILD_DIR)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					MACOS,
+					NDEBUG,
+				);
+				GCC_UNROLL_LOOPS = YES;
+				LD_MAP_FILE_PATH = "$(CONFIGURATION_TEMP_DIR)/LinkMap.txt";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				QT_DIR = "$(SRCROOT)/3rdParty/qt/macOS";
+				SKIP_INSTALL = YES;
+				SYMROOT = Build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wconversion",
+					"-Wliteral-conversion",
+					"-Wno-deprecated",
+					"-Wno-sign-conversion",
+					"-Wno-unused-parameter",
+					"-Wunreachable-code",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A951308CDB28F104D0A4BD2 /* Build configuration list for PBXProject "DirectionalWhistleTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DB1DD96F65B1BF1FFC506E0 /* Debug */,
+				95E1EB2E5DDD587BE5B3E548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7C33BA0A0E7432AB00ACB790 /* Build configuration list for PBXNativeTarget "DirectionalWhistleTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C33BA060E74328D00ACB790 /* Debug */,
+				7C33BA070E74328D00ACB790 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91B15E841AA80083484172DE /* Project object */;
+}

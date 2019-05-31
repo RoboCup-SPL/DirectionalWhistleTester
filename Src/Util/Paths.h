@@ -19,7 +19,12 @@ public:
    */
   static QString getConfigPath()
   {
-    return QCoreApplication::applicationDirPath() + "/../Config";
+    return QCoreApplication::applicationDirPath()
+#ifdef MACOS
+           + "/../../.."
+#endif
+           + "/../Config";
+
   }
 
   /**
@@ -28,6 +33,10 @@ public:
    */
   static QString getLogPath()
   {
-    return QCoreApplication::applicationDirPath() + "/../Logs";
+    return QCoreApplication::applicationDirPath()
+#ifdef MACOS
+           + "/../../.."
+#endif
+           + "/../Logs";
   }
 };

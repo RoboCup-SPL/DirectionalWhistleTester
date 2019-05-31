@@ -2,3 +2,7 @@
 /cmake-build-*
 *.swp
 /Logs/*.txt
+/Build
+/DirectionalWhistleTester.app
+/DirectionalWhistleTester.xcodeproj/project.xcworkspace/xcuserdata
+/DirectionalWhistleTester.xcodeproj/xcuserdata
